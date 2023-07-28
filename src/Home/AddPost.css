@@ -1,0 +1,159 @@
+.searchInputs{
+    margin-top: 105px;
+    display: flex;
+    justify-content: center;
+    color: white;
+    border-color: white;
+}
+
+.search input {
+    border: 0;
+    border-radius: 2px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    font-size: 18px;
+    padding: 15px;
+    height: 30px;
+    width: 300px;
+    background-color: white;
+    
+}
+
+.searchIcon{
+    height: 60px;
+    width: 50px;
+    display: grid;
+    place-items: center;
+}
+
+input:focus {
+    outline: none;
+}
+.searchIcon svg{
+    font-size: 35px;
+}
+
+.bcard{
+    display: flex;
+    justify-content:space-evenly;
+    transform: translateY(20%);
+}
+bcard:hover {
+    background-color: black;
+  }
+  @import url("https://fonts.googleapis.com/css?family=Muli:400,700&display=swap");
+
+.cc {
+  margin: 0;
+  height: 1%;
+
+}
+
+h1 {
+  text-align: center;
+  margin: 1.5em;
+}
+
+.imgcv {
+  width: 100%;
+  
+  
+}
+
+.container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+}
+
+.items {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  animation: carouselAnim 50s infinite alternate linear;
+}
+
+.entry {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  width: 300px;
+  
+  background: #870000;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to top, #190A05, #870000);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to top, #190A05, #870000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  margin: 1em;
+  padding: 0.5em;
+  border-radius: 100px;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+
+  box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.5);
+  
+}
+
+@media only screen and (max-width: 768px) {
+  .items {
+    animation: carouselAnim 35s infinite alternate linear;
+  }
+  
+  @keyframes carouselAnim {
+    from {
+      transform: translate(0, 0);
+    }
+    to {
+      transform: translate(calc(-100% + (2 * 300px)));
+    }
+  }
+}
+
+.entry p {
+  text-align: center;
+  padding: 1em;
+}
+
+.name {
+  font-weight: bold;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+
+}
+
+@keyframes carouselAnim {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(calc(-100% + (5 * 300px)));
+  }
+}
+
+.container .faders {
+  width: 50%;
+  position: absolute;
+  height: 1%;
+}
+
+/* .faders .right,
+.faders .left {
+  background: linear-gradient(
+    to right,
+    rgba(245, 245, 245, 1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  width: 15%;
+  height: 100%;
+  position: absolute;
+  z-index: 200;
+} */
+
+.right {
+  right: 0;
+  background: linear-gradient(
+    to left,
+    rgba(245, 245, 245, 1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}

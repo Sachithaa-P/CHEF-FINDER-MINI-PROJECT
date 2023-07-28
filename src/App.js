@@ -1,58 +1,67 @@
- import React from "react";
- import * as Components from './Components';
+import logo from './logo.svg';
+import './App.css';
+import Login from './Login/Login';
+import Home from './Home/Home';
+import Signup from './Login/Signup';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import ProfileDetails from './Login/ProfileDetails';
+import Feed from './Home/Feed';
+import Menu from './Home/Menu';
+// import Feedback from './Home/Feedback';
+import { useHistory } from 'react-router-dom';
+import AddPost from './Home/AddPost';
+import Updateprofile from './Home/updateprofile';
+import User from './Home/User';
+import Homec from './Chef/Homec';
+import AddPostc from './Chef/AddPostc';
+import Profilec from './Chef/Profilec';
+import Messagec from './Chef/Messagec';
+import Feedc from './Chef/Feedc';
+import Menuc from './Chef/Menuc';
+import { Provider } from "react-redux";
+import Bookingf from './Home/Bookingf';
+import Customisationm from './Home/Customisationm';
+import Admin from './Chef/Admin';
+import store from "./Redux/reduxStore.js"
 
- function App() {
-     const [signIn, toggle] = React.useState(true);
-      return(
-          <Components.Container>
-              <Components.SignUpContainer signinIn={signIn}>
-                  <Components.Form>
-                      <Components.Title>Create Account</Components.Title>
-                      <Components.Input type='text' placeholder='Name' />
-                      <Components.Input type='email' placeholder='Email' />
-                      <Components.Input type='password' placeholder='Password' />
-                      <Components.Button>Sign Up</Components.Button>
-                  </Components.Form>
-              </Components.SignUpContainer>
+function App() {
+  return (
+    <BrowserRouter>
+    <Provider store={store}>
+    <div className="App">
+     
+      <Routes>
+        <Route path="/" element={<Login/>}></Route>
+        <Route path="/Home" element={<Home/>}></Route>
+        <Route path="/book" element={<Feed/>}></Route>
+        <Route path="/signup" element={<Signup/>}></Route>
+        <Route path="/profiledetails" element={<ProfileDetails/>}></Route>
+        <Route path="/feed" element={<Home/>}></Route>
+        <Route path="message" element={<Home/>}></Route>
+        <Route path="/addpost" element={<Home/>}></Route>
+        <Route path="/profile" element={<Home/>}></Route>
+        <Route path="/Menu" element={<Home/>}></Route>
+        {/* <Route path="/Image" element={<Home/>}></Route> */}
 
-              <Components.SignInContainer signinIn={signIn}>
-                   <Components.Form>
-                       <Components.Title>Sign in</Components.Title>
-                       <Components.Input type='email' placeholder='Email' />
-                       <Components.Input type='password' placeholder='Password' />
-                       <Components.Anchor href='#'>Forgot your password?</Components.Anchor>
-                       <Components.Button>Sigin In</Components.Button>
-                   </Components.Form>
-              </Components.SignInContainer>
+        {/* <Route path="/Feedback" element={<Home/>}></Route> */}
+        <Route path="/Updateprofile" element={<Updateprofile/>}></Route>
+        <Route path="/Bookingf" element={<Bookingf/>}></Route>
+        <Route path="/Customisationm" element={<Customisationm/>}></Route>
+        <Route path="/User" element={<User/>}></Route>
+        <Route path="/Chef/Homec" element={<Homec/>}></Route>
+        <Route path="/Chef/Admin" element={<Admin/>}></Route>
+        <Route path="/Chef/feedc" element={<Homec/>}></Route>
+        <Route path="/Chef/addpostc" element={<Homec/>}></Route>
+        <Route path="/Chef/profilec" element={<Homec/>}></Route>
+        <Route path="/Chef/messagec" element={<Homec/>}></Route>
+        <Route path="/Chef/Menuc" element={<Menuc/>}></Route>
+        
 
-              <Components.OverlayContainer signinIn={signIn}>
-                  <Components.Overlay signinIn={signIn}>
+      </Routes>
+    </div>
+    </Provider>
+    </BrowserRouter>
+  );
+}
 
-                  <Components.LeftOverlayPanel signinIn={signIn}>
-                      <Components.Title>Welcome Back!</Components.Title>
-                      <Components.Paragraph>
-                          To keep connected with us please login with your personal info
-                      </Components.Paragraph>
-                      <Components.GhostButton onClick={() => toggle(true)}>
-                          Sign In
-                      </Components.GhostButton>
-                      </Components.LeftOverlayPanel>
-
-                      <Components.RightOverlayPanel signinIn={signIn}>
-                        <Components.Title>Hello, Friend!</Components.Title>
-                        <Components.Paragraph>
-                            Enter Your personal details and start journey with us
-                        </Components.Paragraph>
-                            <Components.GhostButton onClick={() => toggle(false)}>
-                                Sigin Up
-                            </Components.GhostButton> 
-                      </Components.RightOverlayPanel>
-  
-                  </Components.Overlay>
-              </Components.OverlayContainer>
-
-          </Components.Container>
-      )
- }
-
- export default App;
+export default App;

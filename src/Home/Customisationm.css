@@ -1,0 +1,75 @@
+/* Apply styles to the parent container of the FoodMenuForm component */
+.food-menu-form-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 40px;
+    border-radius: 7px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    background: #f9f9f9;
+  }
+  
+  .food-menu-form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  .food-menu-form-container form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .food-menu-form-container form > * {
+    margin-bottom: 15px;
+  }
+  
+  .food-menu-form-container form .MuiFormControl-root {
+    width: 100%;
+  }
+  
+  .food-menu-form-container form .MuiInputLabel-outlined {
+    color: #000; /* Black input label color */
+  }
+  
+  .food-menu-form-container form .MuiInputBase-input {
+    color: #000; /* Black input text color */
+  }
+  
+  .food-menu-form-container form .MuiInputBase-input::placeholder {
+    color: #888; /* Placeholder text color */
+  }
+  
+  .food-menu-form-container form .MuiOutlinedInput-notchedOutline {
+    border-color: #888; /* Input border color */
+  }
+  
+  .food-menu-form-container form .MuiSelect-root {
+    color: #000; /* Black select text color */
+  }
+  
+  .food-menu-form-container form .MuiSelect-icon {
+    color: #000; /* Black select icon color */
+  }
+  
+  .food-menu-form-container form .MuiButton-root {
+    background-color: #000; /* Black button background color */
+    color: #fff; /* White button text color */
+  }
+  
+  .food-menu-form-container form .MuiButton-root:hover {
+    background-color: #333; /* Darker background color on hover */
+  }
+  
+  /* Custom class for the link back to the booking page */
+  .link-back {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #000;
+  }
+  
+  .link-back:hover {
+    color: #333; /* Darker text color on hover */
+  }
+  

@@ -1,0 +1,90 @@
+/* Apply styles to the parent container of the Bookingf component, assuming it has class "bookingf-container" */
+.bookingf-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffffff; /* Fallback color for old browsers */
+    background: linear-gradient(to bottom, #000000, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+  
+  .booking-form-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 40px;
+    border-radius: 7px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    background: #f9f9f9; /* Fallback color for old browsers */
+    background: linear-gradient(to top, #1F1C18, #8E0E00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+  
+  .booking-form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    color: #fffefe; /* White text color */
+  }
+  
+  .booking-form-container form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .booking-form-container form > * {
+    margin-bottom: 15px;
+  }
+  
+  .booking-form-container form .MuiFormControl-root {
+    width: 100%;
+  }
+  
+  .booking-form-container form .MuiInputLabel-outlined {
+    color: #000000; /* White input label color */
+  }
+  
+  .booking-form-container form .MuiInputBase-input {
+    color: #000000; /* White input text color */
+  }
+  
+  .booking-form-container form .MuiInputBase-input::placeholder {
+    color: #000000; /* Placeholder text color */
+  }
+  
+  .booking-form-container form .MuiOutlinedInput-notchedOutline {
+    border-color: #000000; /* Input border color */
+  }
+  
+  .booking-form-container form .MuiSelect-root {
+    color: #000000; /* White select text color */
+  }
+  
+  .booking-form-container form .MuiSelect-icon {
+    color: #000000; /* White select icon color */
+  }
+  
+  .booking-form-container form .MuiRadio-root {
+    color: #000000; /* White radio button color */
+  }
+  
+  .booking-form-container form .MuiButton-root {
+    background-color: #000; /* Black button background color */
+    color: #ffffff; /* White button text color */
+  }
+  
+  .booking-form-container form .MuiButton-root:hover {
+    background-color: #333; /* Darker background color on hover */
+  }
+  
+  /* Custom class for the link back to the booking page */
+  .link-back {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #000;
+  }
+  
+  .link-back:hover {
+    color: #333; /* Darker text color on hover */
+  }
+  

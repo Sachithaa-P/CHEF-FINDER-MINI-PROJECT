@@ -1,0 +1,17 @@
+.chefimg{
+    display: flex;
+    justify-content: center;
+    transform: translateY(20%);
+}
+.redButton{
+    color: '#fff';
+    font-size: 18px;
+    padding: '12px 24px';
+    border-radius: '8px';
+    background-color: darkredt;
+    }
+
+  .cp{
+    display: flex;
+    justify-content: center;
+  }
